@@ -1,6 +1,7 @@
 import React from 'react'
-import spotifyImage from './spotifyImage.png'
+import spotifyImage from '../../assets/spotifyImage.png'
 import {Link} from 'react-router-dom'
+import './NavBar.css'
 
 export default function NavBar() {
   return (

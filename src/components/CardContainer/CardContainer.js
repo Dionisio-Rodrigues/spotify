@@ -1,8 +1,8 @@
 import React from 'react'
-import imagemDelacruz from './imagemDelacruz.jpg'
-import './MenuContainer.css'
+import imagemDelacruz from '../../assets/imagemDelacruz.jpg'
+import './CardContainer.css'
 
-export default function MenuContainer() {
+export default function CardContainer() {
   return (
     <div className='content-menu'>
       <section className='content-card'>
