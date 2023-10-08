@@ -1,25 +1,22 @@
 import React from 'react'
-import imagemDelacruz from '../../assets/imagemDelacruz.jpg'
+import Card from '../Card/Card'
 import './CardContainer.css'
+import { playlists } from '../../DataBase'
+import Carousel from 'react-elastic-carousel'
+
+
+const breakPoints = [
+  { width: 1, itemsToShow: 1},
+  { width: 550, itemsToShow: 2},
+  { width: 768, itemsToShow: 3},
+  { width: 1200, itemsToShow: 4},
+]
 
 export default function CardContainer() {
   return (
-    <div className='content-menu'>
-      <section className='content-card'>
-        <img className='imagem-card' src={imagemDelacruz} alt='imagem'></img>
-        <h2 className='title-card'>Delacruz</h2>
-        <p className='descricao'>Cantor-Compositor</p>
-      </section>
-      <section className='content-card'>
-        <img className='imagem-card' src={imagemDelacruz} alt='imagem'></img>
-        <h2 className='title-card'>Delacruz</h2>
-        <p className='descricao'>Cantor-Compositor</p>
-      </section>
-      <section className='content-card'>
-        <img className='imagem-card' src={imagemDelacruz} alt='imagem'></img>
-        <h2 className='title-card'>Delacruz</h2>
-        <p className='descricao'>Cantor-Compositor</p>
-      </section>  
-    </div>
+    <Carousel className='content-menu' breakPoints={breakPoints}>
+      {playlists.map(playlist => <Card img={playlist.image} name={playlist.name}></Card>)}
+    </Carousel>
   )
 }
+

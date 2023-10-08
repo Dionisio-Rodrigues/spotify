@@ -61,6 +61,8 @@ export default function App(props){
     }
   
     return (
-        faq_set
+      <div id="faq-container">
+        {faq_set}
+      </div>
     );
 }
